@@ -42,6 +42,37 @@ public class Division {
 	 */
 	public long dividir(int denominador, int divisor) {
 		long resultado = 0;
+		Double Odenominador;
+		Double Odivisor;
+		
+		try {
+			Odenominador = Double.valueOf(denominador);
+				
+		}
+		catch (Exception e) {
+			throw new IllegalArgumentException("No se ha inicializado del denominador.");		
+		}
+		
+		try {
+			Odivisor = Double.valueOf(divisor);
+		}
+		catch (Exception e) {
+			throw new IllegalArgumentException("No se ha inicializado del divisor.");
+		}
+
+		if (Odenominador == null) throw new IllegalArgumentException("El denominador es nulo.");
+
+		if (Odivisor == null) throw new IllegalArgumentException("El divisor es nulo.");
+
+		if (Odenominador.isNaN()) throw new IllegalArgumentException("El denominador no es un número.");
+
+		if (Odivisor.isNaN()) throw new IllegalArgumentException("El divisor no es un número.");
+
+		if (denominador == 0) return 0;
+		
+		if (divisor == 0) throw new IllegalArgumentException("El divisor es cero.");
+		
+		resultado = denominador / divisor;
 		
 		return resultado;
 	}
@@ -71,6 +102,47 @@ public class Division {
 	 */
 	public double dividir(double denominador, double divisor) {
 		double resultado = 0;
+
+		Double Odenominador;
+		Double Odivisor;
+
+		try {
+			Odenominador = Double.valueOf(denominador);
+				
+		}
+		catch (Exception e) {
+			throw new IllegalArgumentException("No se ha inicializado del denominador.");		
+		}
+		
+		try {
+			Odivisor = Double.valueOf(divisor);
+		}
+		catch (Exception e) {
+			throw new IllegalArgumentException("No se ha inicializado del divisor.");
+		}
+
+		if (Odenominador == null) throw new IllegalArgumentException("El denominador es nulo.");
+
+		if (Odivisor == null) throw new IllegalArgumentException("El divisor es nulo.");
+		
+		if (Odenominador.isNaN()) throw new IllegalArgumentException("El denominador no es un número.");
+
+		if (Odivisor.isNaN()) throw new IllegalArgumentException("El divisor no es un número.");
+
+		if (denominador == 0) return 0;
+		
+		if (divisor == 0) throw new IllegalArgumentException("El divisor es cero.");
+
+		if (Odenominador == Double.NEGATIVE_INFINITY) throw new IllegalArgumentException("No se puede dividir infinito por un número.");
+
+		if (Odenominador == Double.POSITIVE_INFINITY) throw new IllegalArgumentException("No se puede dividir infinito por un número.");
+			
+		if (Odivisor == Double.NEGATIVE_INFINITY) throw new IllegalArgumentException("No se puede dividir un número entre infinito.");
+
+		if (Odivisor == Double.POSITIVE_INFINITY) throw new IllegalArgumentException("No se puede dividir un número entre infinito.");
+			
+		resultado = denominador / divisor;
+
 		
 		return resultado;
 	}
@@ -95,6 +167,32 @@ public class Division {
 	public double inverso(double numero) {
 		double resultado = 0;
 		
+		Double parametro;
+		
+		try {
+			parametro = Double.valueOf(numero);
+		}
+		catch (Exception e) {
+			throw new IllegalArgumentException("No se ha inicializado del divisor.");
+		}
+
+		if (parametro == null) throw new IllegalArgumentException("El denominador es nulo.");
+
+		
+		if (parametro.isNaN()) throw new IllegalArgumentException("El denominador no es un número.");
+
+
+		if (parametro == 0) return 0;
+		
+
+		if (parametro == Double.NEGATIVE_INFINITY) throw new IllegalArgumentException("No se puede dividir infinito por un número.");
+
+			
+		if (parametro == Double.NEGATIVE_INFINITY) throw new IllegalArgumentException("No se puede dividir un número entre infinito.");
+
+			
+		resultado = 1 / numero;
+		
 		return resultado;
 	}
 	
@@ -115,7 +213,33 @@ public class Division {
 	 */
 	public double raiz(double numero) {
 		double resultado = 0;
+
+		Double parametro;
 		
+		try {
+			parametro = Double.valueOf(numero);
+		}
+		catch (Exception e) {
+			throw new IllegalArgumentException("No se ha inicializado del divisor.");
+		}
+
+		if (parametro == null) throw new IllegalArgumentException("El denominador es nulo.");
+
+		
+		if (parametro.isNaN()) throw new IllegalArgumentException("El denominador no es un número.");
+
+
+		if (parametro == 0) return 0;
+		
+
+		if (parametro == Double.NEGATIVE_INFINITY) throw new IllegalArgumentException("No se puede dividir infinito por un número.");
+
+			
+		if (parametro == Double.NEGATIVE_INFINITY) throw new IllegalArgumentException("No se puede dividir un número entre infinito.");
+
+			
+		resultado = Math.pow(parametro, 1/2);
+
 		return resultado;
 	}
 	
