@@ -46,7 +46,7 @@ public class Resta {
 		 * @param parametro2 -> parametro que será restado del parametro1.
 		 * @return devuelve la resta de ambos parametros.
 		 * @throws IllegalArgumentException se generará está excepción cuando se introduzca
-		 * un parametro no deseado
+		 * un parametro no deseado.
 		 * 
 		 */
 		public double restar(double parametro1, double parametro2) {
