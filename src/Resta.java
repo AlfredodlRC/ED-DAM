@@ -50,10 +50,32 @@ public class Resta {
 		 * 
 		 */
 		public double restar(double parametro1, double parametro2) {
-			double resultado = parametro1 - parametro2;
+			double resultado = 0;
+			double Oparametro1;
+			double Oparametro2;
+			
+			try {
+				Oparametro1 = Double.valueOf(parametro1);
+					
+			}
+			catch (Exception e) {
+				throw new IllegalArgumentException("No se ha inicializado del parametro1.");		
+			}
+			
+			try {
+				Oparametro2 = Double.valueOf(parametro2);
+			}
+			catch (Exception e) {
+				throw new IllegalArgumentException("No se ha inicializado del parametro1.");
+			}
+
+			
+			resultado = parametro1 - parametro2;
 			
 			return resultado;
 		}
+			
+		
 		
 		
 		/**
@@ -76,10 +98,33 @@ public class Resta {
 		 */
 		
 		public int restaEntero(int parametro1, int parametro2) {
-			int resultado = parametro1 * parametro2;
+			int resultado = 0;
+			
+			double Oparametro1;
+			double Oparametro2;
+			
+			try {
+				Oparametro1 = Double.valueOf(parametro1);
+					
+			}
+			catch (Exception e) {
+				throw new IllegalArgumentException("No se ha inicializado del parametro1.");		
+			}
+			
+			try {
+				Oparametro2 = Double.valueOf(parametro2);
+			}
+			catch (Exception e) {
+				throw new IllegalArgumentException("No se ha inicializado del parametro1.");
+			}
+
+			
+			resultado = parametro1 - parametro2;
 			
 			return resultado;
 		}
+			
+		
 
 		/**
 		 * Método que realiza la resta de tres numeros reales y que devuelve otro número real.
@@ -100,9 +145,37 @@ public class Resta {
 		 */
 		public double restaLarga(double parametro1, double parametro2, double parametro3) {
 			double resultado = parametro1 - parametro2 - parametro3;
+			double Oparametro1;
+			double Oparametro2;
+			double Oparametro3;
+			
+			try {
+				Oparametro1 = Double.valueOf(parametro1);
+					
+			}
+			catch (Exception e) {
+				throw new IllegalArgumentException("No se ha inicializado del parametro1.");		
+			}
+			
+			try {
+				Oparametro2 = Double.valueOf(parametro2);
+			}
+			catch (Exception e) {
+				throw new IllegalArgumentException("No se ha inicializado del parametro2.");
+			}
+
+			try {
+				Oparametro3 = Double.valueOf(parametro3);
+			}
+			catch (Exception e) {
+				throw new IllegalArgumentException("No se ha inicializado del parametro3.");
+			}
+			
+			resultado = parametro1 - parametro2 - parametro2;
 			
 			return resultado;
 		}
+			
 		
 		/**
 		 * Método que calcula la resta con valor acumulado y que dará como resultado un número real.
@@ -123,8 +196,21 @@ public class Resta {
 		 * 
 		 */
 		public double restaAcumulado(double Parametro1) {
-			double resultado = acumulador - Parametro1;
+			double resultado = 0;
 			
+			double Oparametro1;
+			double Oparametro2;
+			
+			try {
+				Oparametro1 = Double.valueOf(Parametro1);
+					
+			}
+			catch (Exception e) {
+				throw new IllegalArgumentException("No se ha inicializado del parametro1.");		
+			}
+			
+			
+			resultado = acumulador - Parametro1;
 			return resultado;
 		}
 		}	
