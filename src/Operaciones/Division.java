@@ -1,3 +1,4 @@
+package Operaciones;
 
 
 /**
@@ -238,7 +239,7 @@ public class Division {
 		if (parametro == Double.NEGATIVE_INFINITY) throw new IllegalArgumentException("No se puede dividir un número entre infinito.");
 
 			
-		resultado = Math.pow(parametro, 1/2);
+		resultado = Math.pow(parametro, 0.5);
 
 		return resultado;
 	}
