@@ -62,7 +62,13 @@ public class Multiplicacion {
 		catch (Exception e) {
 			throw new IllegalArgumentException("No se ha inicializado del parametro2");
 		}
+		if (Oparametro1 == null) throw new IllegalArgumentException("El parametro1 es nulo.");
 
+		if (Oparametro2 == null) throw new IllegalArgumentException("El parametro2 es nulo.");
+
+		if (Oparametro1.isNaN()) throw new IllegalArgumentException("El parametro1 no es un número.");
+
+		if (Oparametro2.isNaN()) throw new IllegalArgumentException("El parametro2 no es un número.");
 
 		if (parametro1 == 0) return 0;
 		
@@ -113,7 +119,13 @@ public class Multiplicacion {
 		catch (Exception e) {
 			throw new IllegalArgumentException("No se ha inicializado del parametro2");
 		}
+		if (Oparametro1 == null) throw new IllegalArgumentException("El parametro1 es nulo.");
 
+		if (Oparametro2 == null) throw new IllegalArgumentException("El parametro2 es nulo.");
+
+		if (Oparametro1.isNaN()) throw new IllegalArgumentException("El parametro1 no es un número.");
+
+		if (Oparametro2.isNaN()) throw new IllegalArgumentException("El parametro2 no es un número.");
 
 		if (parametro1 == 0) return 0;
 		
@@ -173,6 +185,18 @@ public class Multiplicacion {
 			throw new IllegalArgumentException("No se ha inicializado del parametro3");
 		}
 
+		if (Oparametro1 == null) throw new IllegalArgumentException("El parametro1 es nulo.");
+
+		if (Oparametro2 == null) throw new IllegalArgumentException("El parametro2 es nulo.");
+		
+		if (Oparametro3 == null) throw new IllegalArgumentException("El parametro3 es nulo.");
+
+		if (Oparametro1.isNaN()) throw new IllegalArgumentException("El parametro1 no es un número.");
+
+		if (Oparametro2.isNaN()) throw new IllegalArgumentException("El parametro2 no es un número.");
+
+		if (Oparametro3.isNaN()) throw new IllegalArgumentException("El parametro3 no es un número.");
+		
 		if (parametro1 == 0) return 0;
 		
 		if (parametro2 == 0) return 0;
