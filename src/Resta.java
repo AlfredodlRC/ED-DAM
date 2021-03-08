@@ -69,6 +69,13 @@ public class Resta {
 				throw new IllegalArgumentException("No se ha inicializado del parametro1.");
 			}
 
+			if (Oparametro1 == null) throw new IllegalArgumentException("El parametro1 es nulo.");
+
+			if (Oparametro2 == null) throw new IllegalArgumentException("El parametro2 es nulo.");
+
+			if (Oparametro1.isNaN()) throw new IllegalArgumentException("El parametro1 no es un número.");
+
+			if (Oparametro2.isNaN()) throw new IllegalArgumentException("El parametro2 no es un número.");
 			
 			resultado = parametro1 - parametro2;
 			
@@ -117,7 +124,13 @@ public class Resta {
 			catch (Exception e) {
 				throw new IllegalArgumentException("No se ha inicializado del parametro1.");
 			}
+			if (Oparametro1 == null) throw new IllegalArgumentException("El parametro1 es nulo.");
 
+			if (Oparametro2 == null) throw new IllegalArgumentException("El parametro2 es nulo.");
+
+			if (Oparametro1.isNaN()) throw new IllegalArgumentException("El parametro1 no es un número.");
+
+			if (Oparametro2.isNaN()) throw new IllegalArgumentException("El parametro2 no es un número.");
 			
 			resultado = parametro1 - parametro2;
 			
@@ -171,6 +184,18 @@ public class Resta {
 				throw new IllegalArgumentException("No se ha inicializado del parametro3.");
 			}
 			
+			if (Oparametro1 == null) throw new IllegalArgumentException("El parametro1 es nulo.");
+
+			if (Oparametro2 == null) throw new IllegalArgumentException("El parametro2 es nulo.");
+			
+			if (Oparametro3 == null) throw new IllegalArgumentException("El parametro3 es nulo.");
+
+			if (Oparametro1.isNaN()) throw new IllegalArgumentException("El parametro1 no es un número.");
+
+			if (Oparametro2.isNaN()) throw new IllegalArgumentException("El parametro2 no es un número.");
+
+			if (Oparametro3.isNaN()) throw new IllegalArgumentException("El parametro3 no es un número.");
+			
 			resultado = parametro1 - parametro2 - parametro2;
 			
 			return resultado;
@@ -199,7 +224,7 @@ public class Resta {
 			double resultado = 0;
 			
 			double Oparametro1;
-			double Oparametro2;
+			
 			
 			try {
 				Oparametro1 = Double.valueOf(Parametro1);
@@ -208,7 +233,9 @@ public class Resta {
 			catch (Exception e) {
 				throw new IllegalArgumentException("No se ha inicializado del parametro1.");		
 			}
-			
+			if (Oparametro1 == null) throw new IllegalArgumentException("El parametro1 es nulo.");	
+
+			if (Oparametro1.isNaN()) throw new IllegalArgumentException("El parametro1 no es un número.");
 			
 			resultado = acumulador - Parametro1;
 			return resultado;
